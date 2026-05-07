@@ -27,80 +27,93 @@ This project supports three architecture variants:
 
 ## 📁 Project Structure
 candidate-pool-system/
-├── client/
-│   ├── public/
-│   │   ├── index.html
-│   │   └── favicon.ico
-│   ├── src/
-│   │   ├── assets/
-│   │   │   └── logo.svg
-│   │   ├── components/
-│   │   │   ├── ui/
-│   │   │   │   ├── button.jsx
-│   │   │   │   ├── card.jsx
-│   │   │   │   ├── input.jsx
-│   │   │   │   ├── modal.jsx
-│   │   │   │   └── form.jsx
-│   │   │   ├── Layout/
-│   │   │   │   ├── Header.jsx
-│   │   │   │   ├── Sidebar.jsx
-│   │   │   │   └── Footer.jsx
-│   │   │   └── common/
-│   │   │       ├── Loader.jsx
-│   │   │       └── ErrorBoundary.jsx
-│   │   ├── pages/
-│   │   │   ├── CandidateForm.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── CandidatesList.jsx
-│   │   │   ├── CandidateDetails.jsx
-│   │   │   └── FiltersView.jsx
-│   │   ├── hooks/
-│   │   │   ├── useAuth.js
-│   │   │   ├── useCandidates.js
-│   │   │   └── useFilters.js
-│   │   ├── services/
-│   │   │   ├── firebase.js
-│   │   │   ├── authService.js
-│   │   │   ├── candidateService.js
-│   │   │   └── validationService.js
-│   │   ├── utils/
-│   │   │   ├── validators.js
-│   │   │   ├── calculators.js
-│   │   │   ├── formatters.js
-│   │   │   └── constants.js
-│   │   ├── context/
-│   │   │   └── AuthContext.jsx
-│   │   ├── styles/
-│   │   │   └── globals.css
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── routes.jsx
-│   ├── .env
-│   ├── .gitignore
-│   ├── index.html
-│   ├── package.json
-│   ├── vite.config.js
-│   └── tailwind.config.js
-├── functions/
-│   ├── index.js
-│   ├── package.json
-│   └── utils/
-│       ├── candidateProcessor.js
-│       ├── duplicateManager.js
-│       ├── emailService.js
-│       ├── aiService.js
-│       └── parserService.js
-├── firebase/
-│   ├── firestore.rules
-│   ├── storage.rules
-│   └── firebase.json
-├── scripts/
-│   ├── seedData.js
-│   └── backup.js
-├── docs/
-│   ├── API.md
-│   └── SETUP.md
-├── .env
+│
+├── client/ # Frontend React application
+│ ├── public/
+│ │ ├── index.html
+│ │ └── favicon.ico
+│ │
+│ ├── src/
+│ │ ├── assets/
+│ │ │ └── logo.svg
+│ │ │
+│ │ ├── components/
+│ │ │ ├── ui/
+│ │ │ │ ├── button.jsx
+│ │ │ │ ├── card.jsx
+│ │ │ │ ├── input.jsx
+│ │ │ │ └── modal.jsx
+│ │ │ │
+│ │ │ ├── Layout/
+│ │ │ │ ├── Header.jsx
+│ │ │ │ ├── Sidebar.jsx
+│ │ │ │ └── Footer.jsx
+│ │ │ │
+│ │ │ ├── common/
+│ │ │ │ ├── Loader.jsx
+│ │ │ │ └── ErrorBoundary.jsx
+│ │ │ │
+│ │ │ ├── CandidateForm.jsx
+│ │ │ ├── Dashboard.jsx
+│ │ │ ├── CandidatesList.jsx
+│ │ │ ├── CandidateDetails.jsx
+│ │ │ └── FiltersView.jsx
+│ │ │
+│ │ ├── hooks/
+│ │ │ ├── useAuth.jsx
+│ │ │ ├── useCandidates.jsx
+│ │ │ └── useFilters.jsx
+│ │ │
+│ │ ├── services/
+│ │ │ ├── firebase.jsx
+│ │ │ ├── authService.jsx
+│ │ │ ├── candidateService.jsx
+│ │ │ └── validationService.jsx
+│ │ │
+│ │ ├── utils/
+│ │ │ ├── validators.jsx
+│ │ │ ├── calculators.jsx
+│ │ │ ├── formatters.jsx
+│ │ │ └── constants.jsx
+│ │ │
+│ │ ├── context/
+│ │ │ └── AuthContext.jsx
+│ │ │
+│ │ ├── styles/
+│ │ │ └── global.css
+│ │ │
+│ │ ├── App.jsx
+│ │ ├── main.jsx
+│ │ └── routes.jsx
+│ │
+│ ├── .gitignore
+│ ├── index.html
+│ ├── package.json
+│ ├── vite.config.js
+│ └── tailwind.config.js
+│
+├── functions/ # Backend serverless functions
+│ ├── index.js
+│ ├── package.json
+│ │
+│ ├── utils/
+│ │ ├── candidateProcessor.js
+│ │ ├── duplicateManager.js
+│ │ ├── emailService.js
+│ │ ├── aiService.js
+│ │ └── parserService.js
+│ │
+│ ├── firebase/
+│ │ ├── firestore.rules
+│ │ └── storage.rules
+│ │
+│ ├── scripts/
+│ │ ├── seedData.js
+│ │ └── backup.js
+│ │
+│ └── docs/
+│ └── API.md
+│
+├── FirebaseBundle.jsx
 ├── .gitignore
-├── README.md
-└── package.json
+└── README.md
