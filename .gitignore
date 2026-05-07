@@ -3,7 +3,6 @@ client/node_modules/
 functions/node_modules/
 
 .env
-server/.env
 
 # Build files
 dist/
