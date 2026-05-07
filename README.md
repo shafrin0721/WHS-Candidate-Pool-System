@@ -28,15 +28,15 @@ This project supports three architecture variants:
 ## 📁 Project Structure
 candidate-pool-system/
 │
-├── client/                          # React Frontend
+├── client/                                 # React Frontend
 │   ├── public/
 │   │   ├── index.html
 │   │   └── favicon.ico
 │   ├── src/
-│   │   ├── assets/                 # Images, icons, fonts
+│   │   ├── assets/                         # Images, icons, fonts
 │   │   │   └── logo.svg
-│   │   ├── components/             # Reusable UI components
-│   │   │   ├── ui/                 # Shadcn UI components
+│   │   ├── components/                     # Reusable UI components
+│   │   │   ├── ui/                         # Shadcn UI components
 │   │   │   │   ├── button.jsx
 │   │   │   │   ├── card.jsx
 │   │   │   │   ├── input.jsx
@@ -49,27 +49,27 @@ candidate-pool-system/
 │   │   │   └── common/
 │   │   │       ├── Loader.jsx
 │   │   │       └── ErrorBoundary.jsx
-│   │   ├── pages/                  # Page components
-│   │   │   ├── CandidateForm.jsx   # Stage 1: Intake & Verification
-│   │   │   ├── Dashboard.jsx       # Stage 4: Dashboard & Insights
+│   │   ├── pages/                          # Page components
+│   │   │   ├── CandidateForm.jsx           # Stage 1: Intake & Verification
+│   │   │   ├── Dashboard.jsx               # Stage 4: Dashboard & Insights
 │   │   │   ├── CandidatesList.jsx
 │   │   │   ├── CandidateDetails.jsx
 │   │   │   └── FiltersView.jsx
-│   │   ├── hooks/                  # Custom React hooks
+│   │   ├── hooks/                          # Custom React hooks
 │   │   │   ├── useAuth.js
 │   │   │   ├── useCandidates.js
 │   │   │   └── useFilters.js
-│   │   ├── services/               # API & Firebase services
-│   │   │   ├── firebase.js         # Firebase config
+│   │   ├── services/                       # API & Firebase services
+│   │   │   ├── firebase.js                 # Firebase config
 │   │   │   ├── authService.js
-│   │   │   ├── candidateService.js # CRUD operations
-│   │   │   └── validationService.js # OTP, email verification
-│   │   ├── utils/                  # Helper functions
-│   │   │   ├── validators.js       # Form data validation
-│   │   │   ├── calculators.js      # Auto-calculate Age from DOB
-│   │   │   ├── formatters.js       # Standardize values
+│   │   │   ├── candidateService.js         # CRUD operations
+│   │   │   └── validationService.js        # OTP, email verification
+│   │   ├── utils/                          # Helper functions
+│   │   │   ├── validators.js               # Form data validation
+│   │   │   ├── calculators.js              # Auto-calculate Age from DOB
+│   │   │   ├── formatters.js               # Standardize values
 │   │   │   └── constants.js
-│   │   ├── context/                # React Context API
+│   │   ├── context/                        # React Context API
 │   │   │   └── AuthContext.jsx
 │   │   ├── styles/
 │   │   │   └── globals.css
@@ -83,30 +83,30 @@ candidate-pool-system/
 │   ├── vite.config.js
 │   └── tailwind.config.js
 │
-├── functions/                       # Firebase Functions (Backend Logic)
-│   ├── index.js                    # Main functions entry
+├── functions/                              # Firebase Functions (Backend Logic)
+│   ├── index.js                            # Main functions entry
 │   ├── package.json
 │   └── utils/
-│       ├── candidateProcessor.js   # Stage 2 & 3 logic
-│       ├── duplicateManager.js     # Merge/Update logic
-│       ├── emailService.js         # OTP emails
-│       ├── aiService.js            # Option 2/3: OpenAI/Gemini API
-│       └── parserService.js        # CV parsing (Affinda/Hugging Face)
+│       ├── candidateProcessor.js           # Stage 2 & 3 logic
+│       ├── duplicateManager.js             # Merge/Update logic
+│       ├── emailService.js                 # OTP emails
+│       ├── aiService.js                    # Option 2/3: OpenAI/Gemini API
+│       └── parserService.js                # CV parsing (Affinda/Hugging Face)
 │
-├── firebase/                        # Firebase configuration
+├── firebase/                               # Firebase configuration
 │   ├── firestore.rules
 │   ├── storage.rules
 │   └── firebase.json
 │
-├── scripts/                         # Utility scripts
+├── scripts/                                # Utility scripts
 │   ├── seedData.js
 │   └── backup.js
 │
-├── docs/                            # Documentation
+├── docs/                                   # Documentation
 │   ├── API.md
 │   └── SETUP.md
 │
 ├── .env
 ├── .gitignore
 ├── README.md
-└── package.json                     # Root package.json (optional)
+└── package.json                            # Root package.json (optional)
