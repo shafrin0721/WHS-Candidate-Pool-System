@@ -25,31 +25,60 @@ This project supports three architecture variants:
 | **Option 2** | React + Firebase + OpenAI + Affinda + Power BI | Enterprise-level HR operations |
 | **Option 3** | React + Firebase + Gemini + spaCy + Looker Studio | High-volume AI recruitment |
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
-| Folder/File | Description |
-|------------|-------------|
-| **client/** | Frontend React application |
-| ├─ public/ | Static assets |
-| ├─ src/ | Source code |
-| │  ├─ assets/ | Images, logos, fonts |
-| │  ├─ components/ | Reusable React components |
-| │  │  ├─ ui/ | UI components (button, card, input, modal) |
-| │  │  ├─ Layout/ | Layout components (Header, Sidebar, Footer) |
-| │  │  ├─ common/ | Common components (Loader, ErrorBoundary) |
-| │  │  └─ CandidateForm.jsx, Dashboard.jsx, etc. | Feature components |
-| │  ├─ hooks/ | Custom React hooks |
-| │  ├─ services/ | API and service integrations |
-| │  ├─ utils/ | Utility functions |
-| │  ├─ context/ | React Context providers |
-| │  ├─ styles/ | Global CSS styles |
-| │  ├─ App.jsx | Main app component |
-| │  ├─ main.jsx | Entry point |
-| │  └─ routes.jsx | Route definitions |
-| │  |
-| **functions/** | Backend serverless functions |
-| ├─ index.js | Main entry point |
-| ├─ utils/ | Backend utilities |
-| ├─ firebase/ | Firebase configurations |
-| ├─ scripts/ | Database scripts |
-| └─ docs/ | API documentation |
+```bash
+candidate-pool-system/
+├── client/                                 # React Frontend
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── assets/                         # Images, icons, fonts
+│   │   │   └── logo.svg
+│   │   ├── components/                     # Reusable UI components
+│   │   │   ├── ui/                         # Shadcn UI components
+│   │   │   ├── Layout/                     # Header, Sidebar, Footer
+│   │   │   └── common/                     # Loader, ErrorBoundary
+│   │   ├── pages/                          # Page components
+│   │   │   ├── CandidateForm.jsx           # Stage 1: Intake & Verification
+│   │   │   ├── Dashboard.jsx               # Stage 4: Dashboard & Insights
+│   │   │   ├── CandidatesList.jsx
+│   │   │   ├── CandidateDetails.jsx
+│   │   │   └── FiltersView.jsx
+│   │   ├── hooks/                          # Custom React hooks
+│   │   ├── services/                       # API & Firebase services
+│   │   ├── utils/                          # Helper functions
+│   │   ├── context/                        # React Context API
+│   │   ├── styles/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── routes.jsx
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   ├── vite.config.js
+│   └── tailwind.config.js
+│
+├── functions/                              # Firebase Functions (Backend Logic)
+│   ├── index.js
+│   ├── package.json
+│   └── utils/
+│       ├── candidateProcessor.js           # Stage 2 & 3 logic
+│       ├── duplicateManager.js             # Merge/Update logic
+│       ├── emailService.js                 # OTP emails
+│       ├── aiService.js                    # OpenAI/Gemini API
+│       └── parserService.js                # CV parsing
+│
+├── firebase/                               # Firebase configuration
+│   ├── firestore.rules
+│   ├── storage.rules
+│   └── firebase.json
+│
+├── scripts/                                # Utility scripts
+├── docs/                                   # Documentation
+├── .env
+├── .gitignore
+├── README.md
+└── package.json
+```
