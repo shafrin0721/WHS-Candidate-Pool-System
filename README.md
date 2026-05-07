@@ -25,95 +25,31 @@ This project supports three architecture variants:
 | **Option 2** | React + Firebase + OpenAI + Affinda + Power BI | Enterprise-level HR operations |
 | **Option 3** | React + Firebase + Gemini + spaCy + Looker Studio | High-volume AI recruitment |
 
-## 📁 Project Structure
-candidate-pool-system/
-│
-├── client/ # Frontend React application
-│ ├── public/
-│ │ ├── index.html
-│ │ └── favicon.ico
-│ │
-│ ├── src/
-│ │ ├── assets/
-│ │ │ └── logo.svg
-│ │ │
-│ │ ├── components/
-│ │ │ ├── ui/
-│ │ │ │ ├── button.jsx
-│ │ │ │ ├── card.jsx
-│ │ │ │ ├── input.jsx
-│ │ │ │ └── modal.jsx
-│ │ │ │
-│ │ │ ├── Layout/
-│ │ │ │ ├── Header.jsx
-│ │ │ │ ├── Sidebar.jsx
-│ │ │ │ └── Footer.jsx
-│ │ │ │
-│ │ │ ├── common/
-│ │ │ │ ├── Loader.jsx
-│ │ │ │ └── ErrorBoundary.jsx
-│ │ │ │
-│ │ │ ├── CandidateForm.jsx
-│ │ │ ├── Dashboard.jsx
-│ │ │ ├── CandidatesList.jsx
-│ │ │ ├── CandidateDetails.jsx
-│ │ │ └── FiltersView.jsx
-│ │ │
-│ │ ├── hooks/
-│ │ │ ├── useAuth.jsx
-│ │ │ ├── useCandidates.jsx
-│ │ │ └── useFilters.jsx
-│ │ │
-│ │ ├── services/
-│ │ │ ├── firebase.jsx
-│ │ │ ├── authService.jsx
-│ │ │ ├── candidateService.jsx
-│ │ │ └── validationService.jsx
-│ │ │
-│ │ ├── utils/
-│ │ │ ├── validators.jsx
-│ │ │ ├── calculators.jsx
-│ │ │ ├── formatters.jsx
-│ │ │ └── constants.jsx
-│ │ │
-│ │ ├── context/
-│ │ │ └── AuthContext.jsx
-│ │ │
-│ │ ├── styles/
-│ │ │ └── global.css
-│ │ │
-│ │ ├── App.jsx
-│ │ ├── main.jsx
-│ │ └── routes.jsx
-│ │
-│ ├── .gitignore
-│ ├── index.html
-│ ├── package.json
-│ ├── vite.config.js
-│ └── tailwind.config.js
-│
-├── functions/ # Backend serverless functions
-│ ├── index.js
-│ ├── package.json
-│ │
-│ ├── utils/
-│ │ ├── candidateProcessor.js
-│ │ ├── duplicateManager.js
-│ │ ├── emailService.js
-│ │ ├── aiService.js
-│ │ └── parserService.js
-│ │
-│ ├── firebase/
-│ │ ├── firestore.rules
-│ │ └── storage.rules
-│ │
-│ ├── scripts/
-│ │ ├── seedData.js
-│ │ └── backup.js
-│ │
-│ └── docs/
-│ └── API.md
-│
-├── FirebaseBundle.jsx
-├── .gitignore
-└── README.md
+## 📁 Folder Structure
+
+| Folder/File | Description |
+|------------|-------------|
+| **client/** | Frontend React application |
+| ├─ public/ | Static assets |
+| ├─ src/ | Source code |
+| │  ├─ assets/ | Images, logos, fonts |
+| │  ├─ components/ | Reusable React components |
+| │  │  ├─ ui/ | UI components (button, card, input, modal) |
+| │  │  ├─ Layout/ | Layout components (Header, Sidebar, Footer) |
+| │  │  ├─ common/ | Common components (Loader, ErrorBoundary) |
+| │  │  └─ CandidateForm.jsx, Dashboard.jsx, etc. | Feature components |
+| │  ├─ hooks/ | Custom React hooks |
+| │  ├─ services/ | API and service integrations |
+| │  ├─ utils/ | Utility functions |
+| │  ├─ context/ | React Context providers |
+| │  ├─ styles/ | Global CSS styles |
+| │  ├─ App.jsx | Main app component |
+| │  ├─ main.jsx | Entry point |
+| │  └─ routes.jsx | Route definitions |
+| │  |
+| **functions/** | Backend serverless functions |
+| ├─ index.js | Main entry point |
+| ├─ utils/ | Backend utilities |
+| ├─ firebase/ | Firebase configurations |
+| ├─ scripts/ | Database scripts |
+| └─ docs/ | API documentation |
