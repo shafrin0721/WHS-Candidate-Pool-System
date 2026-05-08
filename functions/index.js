@@ -2,7 +2,7 @@ const express = require('express');
 const { body, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const OpenAI = require('openai');
+const OpenAI = require('openai/index.js');
 
 const app = express();
 app.use(express.json());
