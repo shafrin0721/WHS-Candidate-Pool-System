@@ -158,18 +158,18 @@ candidate-pool-system/
 │   │   │   └── constants.js
 │   │   │
 │   │   ├── layouts/
-│   │   │   ├── MainLayout.jsx
-│   │   │   └── AdminLayout.jsx
+│   │   │   ├── MainLayout.tsx
+│   │   │   └── AdminLayout.tsx
 │   │   │
 │   │   ├── styles/
 │   │   │   └── globals.css
 │   │   │
-│   │   ├── App.jsx
-│   │   ├── AppRoutes.jsx
-│   │   └── main.jsx
+│   │   ├── App.tsx
+│   │   ├── AppRoutes.tsx
+│   │   └── main.tsx
 │   │
 │   ├── package.json
-│   └── vite.config.js
+│   └── vite.config.ts
 │
 ├── functions/                         # Node.js Backend
 │
