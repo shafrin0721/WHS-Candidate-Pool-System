@@ -164,12 +164,12 @@ candidate-pool-system/
 │   │   ├── styles/
 │   │   │   └── globals.css
 │   │   │
-│   │   ├── App.jsx
-│   │   ├── AppRoutes.jsx
-│   │   └── main.jsx
+│   │   ├── App.tsx
+│   │   ├── AppRoutes.tsx
+│   │   └── main.tsx
 │   │
 │   ├── package.json
-│   └── vite.config.js
+│   └── vite.config.ts
 │
 ├── functions/                         # Node.js Backend
 │
