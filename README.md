@@ -158,8 +158,8 @@ candidate-pool-system/
 │   │   │   └── constants.js
 │   │   │
 │   │   ├── layouts/
-│   │   │   ├── MainLayout.jsx
-│   │   │   └── AdminLayout.jsx
+│   │   │   ├── MainLayout.tsx
+│   │   │   └── AdminLayout.tsx
 │   │   │
 │   │   ├── styles/
 │   │   │   └── globals.css
