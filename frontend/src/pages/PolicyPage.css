@@ -1,0 +1,59 @@
+/* Shared styling for Privacy Policy and Terms */
+
+.policy-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f3f6fb;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+}
+
+.policy-card {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
+  padding: 2.25rem;
+}
+
+.policy-title {
+  font-size: clamp(1.7rem, 2.3vw, 2.25rem);
+  margin: 0 0 0.25rem;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+.policy-updated {
+  margin: 0 0 1.75rem;
+  color: #64748b;
+  font-weight: 650;
+  font-size: 0.95rem;
+}
+
+.policy-section {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.policy-section h2 {
+  color: #0f172a;
+  font-size: 1.1rem;
+  margin-bottom: 0.65rem;
+}
+
+.policy-section p {
+  color: #334155;
+  line-height: 1.7;
+}
+
+.policy-section a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.policy-section a:hover {
+  text-decoration: underline;
+}
+
