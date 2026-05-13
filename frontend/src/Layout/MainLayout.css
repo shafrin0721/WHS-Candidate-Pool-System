@@ -91,6 +91,48 @@
   overflow: hidden;
 }
 
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 28px;
+  border-bottom: 1px solid #eef2f7;
+  background: #ffffff;
+}
+
+.main-brand a {
+  display: inline-flex;
+  align-items: center;
+  color: #0f172a;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.main-nav-link {
+  color: #475569;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav-link:hover,
+.main-nav-link.active {
+  background: #eef2ff;
+  color: #1d4ed8;
+}
+
 .page-header {
   padding: 0;
   border-bottom: none;

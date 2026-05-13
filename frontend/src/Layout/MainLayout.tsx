@@ -43,6 +43,12 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     { name: "Settings", path: "/settings", icon: <SettingsIcon /> },
   ];
 
+  const pageLinks = [
+    { name: "Candidates", path: "/candidates" },
+    { name: "Track Ticket", path: "/ticket-tracking" },
+    { name: "Help Center", path: "/help" },
+  ];
+
   return (
     <div className="main-layout">
       <aside className="sidebar">
@@ -67,6 +73,22 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       </aside>
 
       <main className="content">
+        <header className="main-header">
+          <div className="main-brand">
+            <Link to="/dashboard">CandidateHub</Link>
+          </div>
+          <nav className="main-nav">
+            {pageLinks.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`main-nav-link ${location.pathname === item.path ? "active" : ""}`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+        </header>
         <div className="page-header">
           <h2>Candidate view</h2>
         </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Candidates.css";
 
 type CandidateStatusColor = "blue" | "gray" | "red";
@@ -54,6 +55,15 @@ const ProfileIcon = () => (
 );
 
 const Candidates = () => {
+  const [ticketSearch, setTicketSearch] = useState("");
+  const navigate = useNavigate();
+
+  const handleTrackTicket = () => {
+    const value = ticketSearch.trim();
+    if (!value) return;
+    navigate(`/ticket-tracking?ticketId=${encodeURIComponent(value)}`);
+  };
+
   const [candidates] = useState<Candidate[]>([
     {
       id: 1,
@@ -144,6 +154,27 @@ const Candidates = () => {
             placeholder="Search by name, email, or keywords..."
             className="search-input"
           />
+        </div>
+      </div>
+
+      <div className="ticket-panel">
+        <div className="ticket-panel-copy">
+          <h2>Track a support ticket</h2>
+          <p>Check the status of candidate support requests or open the Help Center for more assistance.</p>
+        </div>
+        <div className="ticket-panel-row">
+          <input
+            className="ticket-input"
+            value={ticketSearch}
+            onChange={(e) => setTicketSearch(e.target.value)}
+            placeholder="Enter ticket ID (e.g. WHS-7421)"
+          />
+          <button type="button" className="btn btn-primary" onClick={handleTrackTicket}>
+            Track Ticket
+          </button>
+          <Link to="/help" className="btn btn-secondary">
+            Help Center
+          </Link>
         </div>
       </div>
 

@@ -213,6 +213,80 @@
   border-color: #999;
 }
 
+.btn-primary {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.ticket-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  margin: 0 24px 18px;
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1px solid #e2efff;
+}
+
+.ticket-panel-copy {
+  min-width: 260px;
+  max-width: 620px;
+}
+
+.ticket-panel-copy h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.ticket-panel-copy p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.ticket-panel-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+.ticket-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+  background: #ffffff;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.ticket-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+@media (max-width: 860px) {
+  .ticket-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 .btn-icon {
   display: inline-flex;
   align-items: center;

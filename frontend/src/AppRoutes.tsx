@@ -4,18 +4,14 @@ import EmailVerification from "./pages/EmailVerification/EmailVerification";
 import CandidateApplicationView from "./pages/CandidateApplication/CandidateApplication";
 
 import MainLayout from "./Layout/MainLayout";
+import Dashboard from "./pages/CandidateDashboard/Dashboard";
 import Candidates from "./pages/Candidates/Candidates";
+import TicketTracking from "./pages/TicketTracking/TicketTracking";
+import HelpCenter from "./pages/HelpCenter/HelpCenter";
 
 import Terms from "./pages/Terms/Terms";
 import Privacy from "./pages/Privacy/Privacy";
 import NotFound from "./pages/NotFound/NotFound";
-
-const Dashboard = () => (
-  <div className="dashboard">
-    <h2>Dashboard</h2>
-    <p>Welcome to CandidateHub</p>
-  </div>
-);
 
 const Duplicates = () => (
   <div className="duplicates">
@@ -60,6 +56,22 @@ const AppRoutes = () => {
           element={
             <MainLayout>
               <Duplicates />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/ticket-tracking"
+          element={
+            <MainLayout>
+              <TicketTracking />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/help"
+          element={
+            <MainLayout>
+              <HelpCenter />
             </MainLayout>
           }
         />

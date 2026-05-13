@@ -4,6 +4,19 @@ import { Link } from 'react-router-dom'
 function Home() {
   return (
     <div className="home-page">
+      <header className="home-nav">
+        <div className="home-brand">
+          <Link to="/">CandidateHub</Link>
+        </div>
+        <nav className="home-nav-links">
+          <Link to="/browse">Browse</Link>
+          <Link to="/help">Help Center</Link>
+          <Link to="/signin" className="nav-button">
+            Sign In
+          </Link>
+        </nav>
+      </header>
+
       <header className="home-hero">
         <div className="home-hero-inner">
           <div className="home-hero-copy">
