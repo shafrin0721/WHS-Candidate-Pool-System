@@ -1,0 +1,161 @@
+/* =========================
+   RESET / BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* =========================
+   LAYOUT HELPERS
+========================= */
+.min-screen-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-xl {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =========================
+   BACKGROUNDS (your design)
+========================= */
+.bg-main-gradient {
+  background: linear-gradient(135deg, #0e4b61 0%, #1a7195 50%, #29a0b1 100%);
+}
+
+.bg-button-gradient {
+  background: linear-gradient(90deg, #1d6fa5 0%, #68b94f 100%);
+}
+
+/* =========================
+   GLASS / FEATURE CARD
+========================= */
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+/* =========================
+   FORM STYLES (reusable)
+========================= */
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.input:focus {
+  border-color: #1d6fa5;
+  box-shadow: 0 0 0 3px rgba(29, 111, 165, 0.2);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #1d6fa5 0%, #68b94f 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.mt-2 { margin-top: 10px; }
+.mt-4 { margin-top: 20px; }
+.mt-6 { margin-top: 30px; }
+
+.rounded-xl {
+  border-radius: 12px;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.social-btn:hover {
+  background: #f3f4f6;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: uppercase;
+}

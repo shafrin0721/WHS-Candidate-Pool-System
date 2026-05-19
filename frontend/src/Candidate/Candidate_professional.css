@@ -1,185 +1,181 @@
-/* Candidate Professional Page Styles */
-
 .candidate-professional-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  background: #f7f9fb;
-  padding: 32px 20px 48px;
-  font-family: 'Inter', sans-serif;
-  color: #191c1e;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
 }
 
 .candidate-professional-form-card {
-  max-width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  background: #ffffff;
-  border: 1px solid rgba(116, 118, 132, 0.2);
-  border-radius: 24px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .candidate-professional-header {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 .candidate-professional-form-title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
-  color: #002068;
-  margin: 0;
+  color: #1a1a2e;
+  margin: 0 0 24px 0;
+  text-align: center;
 }
 
 .candidate-professional-step-indicator {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.candidate-professional-step-number,
-.candidate-professional-step-title {
+.candidate-professional-step-number {
   font-size: 14px;
   font-weight: 600;
-  color: #506600;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .candidate-professional-step-title {
-  color: #002068;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a2e;
 }
 
 .candidate-professional-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 .candidate-professional-form-section {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  flex: 1;
 }
 
 .candidate-professional-form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
 .candidate-professional-form-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .candidate-professional-form-group label {
-  color: #191c1e;
   font-size: 14px;
   font-weight: 600;
+  color: #1a1a2e;
+  margin: 0;
 }
 
 .candidate-professional-form-group select {
-  width: 100%;
-  min-height: 48px;
   padding: 12px 16px;
-  border: 1px solid #d8dadc;
-  border-radius: 14px;
-  background: #ffffff;
-  color: #191c1e;
-  font-size: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #1a1a2e;
+  transition: all 0.3s ease;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  appearance: none;
+  background: white;
+  cursor: pointer;
 }
 
 .candidate-professional-form-group select:focus {
-  border-color: #002068;
-  box-shadow: 0 0 0 4px rgba(0, 32, 104, 0.08);
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 .candidate-professional-form-group select:hover {
-  border-color: #002068;
+  border-color: #667eea;
 }
 
 .candidate-professional-info-box {
-  background: #e9f2ff;
-  border-radius: 16px;
-  padding: 20px;
-  color: #2a4b8e;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.candidate-professional-info-box p {
   font-size: 14px;
-  line-height: 1.6;
-  border: 1px solid rgba(0, 32, 104, 0.12);
+  color: #1a1a2e;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .candidate-professional-form-actions {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  align-items: center;
-}
-
-.candidate-professional-back-button,
-.candidate-professional-continue-button {
-  border-radius: 14px;
-  padding: 14px 30px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  margin-top: 16px;
 }
 
 .candidate-professional-back-button {
-  background: #ffffff;
-  border: 1px solid #d8dadc;
-  color: #191c1e;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .candidate-professional-back-button:hover {
-  background: #f2f4f6;
-  transform: translateY(-1px);
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.candidate-professional-back-button:active {
+  transform: translateY(0);
 }
 
 .candidate-professional-continue-button {
-  background: #002068;
-  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   border: none;
-  box-shadow: 0px 10px 30px rgba(0, 32, 104, 0.12);
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .candidate-professional-continue-button:hover {
-  opacity: 0.95;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.candidate-professional-continue-button:active {
+  transform: translateY(0);
 }
 
 .candidate-professional-illustration {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
-  background: #f7f9fb;
-  border: 1px solid #e0e3e5;
-  border-radius: 24px;
+  padding: 20px;
 }
 
-.candidate-professional-illustration-svg,
-.candidate-professional-illustration img {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-}
-
-@media (min-width: 1024px) {
-  .candidate-professional-form-card {
-    grid-template-columns: 7fr 5fr;
-    padding: 40px;
-  }
-
-  .candidate-professional-content {
-    grid-template-columns: 1fr;
-  }
+.candidate-professional-illustration-svg {
+  width: 150px;
+  height: 150px;
 }
 
 @media (max-width: 768px) {
@@ -187,13 +183,31 @@
     padding: 24px;
   }
 
-  .candidate-professional-form-actions {
+  .candidate-professional-content {
     flex-direction: column;
-    align-items: stretch;
+    gap: 24px;
+  }
+
+  .candidate-professional-illustration {
+    order: -1;
+  }
+
+  .candidate-professional-form-title {
+    font-size: 24px;
+  }
+
+  .candidate-professional-step-title {
+    font-size: 16px;
+  }
+
+  .candidate-professional-form-group select {
+    font-size: 14px;
+    padding: 10px 14px;
   }
 
   .candidate-professional-back-button,
   .candidate-professional-continue-button {
-    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
   }
 }
