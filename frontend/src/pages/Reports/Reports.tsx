@@ -107,7 +107,7 @@ const Reports = () => {
       format: "PDF",
       generatedAt: formatDateTime(),
       generatedBy: "Admin",
-      records: 2458,
+      records: filteredCandidates.length,
     };
 
     setRecentReports((currentReports) => [newReport, ...currentReports]);

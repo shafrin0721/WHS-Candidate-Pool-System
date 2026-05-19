@@ -92,7 +92,7 @@ const Reports = () => {
       type: selectedReport.category,
       format: "PDF",
       generatedAt: formatDateTime(),
-      records: 2458,
+      records: filteredCandidates.length,
     };
 
     setRecentReports((currentReports) => [newReport, ...currentReports]);
