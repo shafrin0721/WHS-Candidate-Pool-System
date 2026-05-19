@@ -1,0 +1,189 @@
+.salary-insights-page {
+  gap: 14px;
+  font-size: 12px;
+  color: #14213d;
+}
+
+.salary-insights-page .filter-panel,
+.salary-insights-page .chart-panel,
+.salary-overview-card {
+  padding: 14px;
+  border-color: #e8edf5;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.03);
+}
+
+.salary-insights-page .page-title-block h1 {
+  font-size: 17px;
+  line-height: 1.15;
+}
+
+.salary-insights-page .page-title-block p {
+  margin-top: 2px;
+  font-size: 11px;
+}
+
+.salary-top-grid,
+.salary-bottom-grid {
+  display: grid;
+  gap: 14px;
+  align-items: start;
+}
+
+.salary-distribution-card,
+.salary-donut-card,
+.salary-overview-card,
+.salary-table-card {
+  align-self: start;
+}
+
+.salary-insights-page .chart-panel h2,
+.salary-overview-card h2,
+.salary-table-card .panel-header h2 {
+  margin: 0 0 3px;
+  color: #13264b;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.salary-insights-page .chart-panel h2 span {
+  font-weight: 700;
+}
+
+.salary-insights-page .chart-panel > p {
+  margin: 0 0 8px;
+  color: #8a98ad;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.salary-table-card .panel-header {
+  padding: 13px 14px 10px;
+}
+
+.salary-insights-page .chart-box,
+.salary-insights-page .salary-bar-chart-box {
+  height: 240px;
+}
+
+.salary-insights-page .salary-donut-chart-box {
+  height: 230px;
+}
+
+.salary-overview-card h2 {
+  margin-bottom: 11px;
+}
+
+.salary-overview-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid #eef2f7;
+}
+
+.salary-overview-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.salary-overview-row span {
+  color: #6b7890;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.salary-overview-row strong {
+  color: #13264b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.salary-experience-table {
+  min-width: 0;
+  font-size: 11px;
+}
+
+.salary-experience-table th {
+  padding: 11px 13px;
+  color: #4969b8;
+  font-size: 10px;
+  text-transform: none;
+}
+
+.salary-experience-table td {
+  padding: 14px 13px;
+}
+
+.salary-donut-wrap {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.9fr) minmax(150px, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.salary-donut-legend {
+  display: grid;
+  gap: 10px;
+}
+
+.salary-donut-legend-row {
+  display: grid;
+  grid-template-columns: 10px minmax(54px, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  color: #41516b;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.salary-donut-legend-row strong {
+  color: #13264b;
+  font-size: 10px;
+}
+
+.salary-donut-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.salary-insights-page .admin-input {
+  min-height: 36px;
+  padding: 8px 10px;
+  font-size: 11px;
+}
+
+.salary-insights-page .admin-label {
+  margin-bottom: 5px;
+  font-size: 9px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.salary-insights-page .admin-button {
+  min-height: 36px;
+  padding: 8px 14px;
+  font-size: 11px;
+}
+
+.salary-insights-page .admin-date-grid {
+  gap: 8px;
+}
+
+@media (min-width: 960px) {
+  .salary-top-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(260px, 3fr);
+  }
+
+  .salary-bottom-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .salary-donut-wrap {
+    grid-template-columns: 1fr;
+  }
+}
