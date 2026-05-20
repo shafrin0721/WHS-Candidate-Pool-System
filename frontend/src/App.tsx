@@ -1,48 +1,50 @@
 import { useState } from 'react';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import BasicInformation from './Candidate/BasicInformation';
-// import ProfessionalInfo from './Candidate/ProfessionalInfo';  // Commented out
+import ProfessionalInfo from './Candidate/ProfessionalInfo';
 import type { BasicInfoData, ProfessionalInfoData } from './Candidate/types';
 
-type Step = 'basic' | 'professional';
-
 function App() {
-  const [currentStep, setCurrentStep] = useState<Step>('basic');
+  const navigate = useNavigate();
   const [basicData, setBasicData] = useState<BasicInfoData | null>(null);
   const [professionalData, setProfessionalData] = useState<ProfessionalInfoData | null>(null);
 
   const handleBasicNext = (data: BasicInfoData) => {
     setBasicData(data);
-    setCurrentStep('professional');
-    console.log('Basic Data:', data);
-    alert('Basic Information Saved! Professional Info page coming soon...');
+    navigate('/candidate/professional');
   };
 
   const handleProfessionalNext = (data: ProfessionalInfoData) => {
     setProfessionalData(data);
     console.log('All Data:', { basicData, professionalData: data });
-    alert('Profile completed! Check console for data.');
-  };
-
-  const handleBack = () => {
-    setCurrentStep('basic');
   };
 
   return (
-    <div>
-      {currentStep === 'basic' && (
-        <BasicInformation onNext={handleBasicNext} initialData={basicData || undefined} />
-      )}
-      {/* Temporarily commented - will uncomment after creating ProfessionalInfo.tsx
-      {currentStep === 'professional' && (
-        <ProfessionalInfo
-          onNext={handleProfessionalNext}
-          onBack={handleBack}
-          initialData={professionalData || undefined}
-          basicData={basicData || undefined}
-        />
-      )}
-      */}
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigate to="/candidate/basic" replace />} />
+      <Route path="/candidate" element={<Navigate to="/candidate/basic" replace />} />
+      <Route
+        path="/candidate/basic"
+        element={
+          <BasicInformation
+            onNext={handleBasicNext}
+            initialData={basicData ?? undefined}
+          />
+        }
+      />
+      <Route
+        path="/candidate/professional"
+        element={
+          <ProfessionalInfo
+            onNext={handleProfessionalNext}
+            onBack={() => navigate('/candidate/basic')}
+            initialData={professionalData ?? undefined}
+            basicData={basicData ?? undefined}
+          />
+        }
+      />
+      <Route path="*" element={<Navigate to="/candidate/basic" replace />} />
+    </Routes>
   );
 }
 
