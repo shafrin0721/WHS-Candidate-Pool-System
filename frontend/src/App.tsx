@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useState } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import BasicInformation from './Candidate/BasicInformation';
 import ProfessionalInfo from './Candidate/ProfessionalInfo';
@@ -14,14 +14,6 @@ const initialFormData: CandidateFormData = {
   willingToContact: '',
   salaryRange: '',
 };
-
-function FormStepLayout({ children }: { children: ReactNode }) {
-  return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 fade-in">
-      <div className="w-full max-w-5xl card">{children}</div>
-    </div>
-  );
-}
 
 function App() {
   const navigate = useNavigate();
@@ -74,30 +66,28 @@ function App() {
       <Route
         path="/candidate/skills"
         element={
-          <FormStepLayout>
-            <SkillsExperience
-              formData={formData}
-              updateFormData={updateFormData}
-              onNext={() => navigate('/candidate/additional')}
-              onBack={() => navigate('/candidate/professional')}
-            />
-          </FormStepLayout>
+          <SkillsExperience
+            formData={formData}
+            updateFormData={updateFormData}
+            onNext={() => navigate('/candidate/additional')}
+            onBack={() => navigate('/candidate/professional')}
+            basicData={basicData ?? undefined}
+          />
         }
       />
       <Route
         path="/candidate/additional"
         element={
-          <FormStepLayout>
-            <AdditionalDetails
-              formData={formData}
-              updateFormData={updateFormData}
-              onNext={() => {
-                handleFinalSubmit();
-                alert('Profile saved! Check the browser console for full data.');
-              }}
-              onBack={() => navigate('/candidate/skills')}
-            />
-          </FormStepLayout>
+          <AdditionalDetails
+            formData={formData}
+            updateFormData={updateFormData}
+            onNext={() => {
+              handleFinalSubmit();
+              alert('Profile saved! Check the browser console for full data.');
+            }}
+            onBack={() => navigate('/candidate/skills')}
+            basicData={basicData ?? undefined}
+          />
         }
       />
       <Route path="*" element={<Navigate to="/candidate/basic" replace />} />
