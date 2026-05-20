@@ -1,4 +1,4 @@
-import logoUrl from '../assets/workforce-logo.svg'
+
 
 type MetricCard = {
   title: string
@@ -293,7 +293,7 @@ function AdminDashboard() {
       <aside className="sidebar">
         <div className="sidebar__brand">
           <div className="sidebar__logo" aria-hidden="true">
-            <img src={logoUrl} alt="Workforce Hiring Solutions logo" className="sidebar__logo-image" />
+            <img src="/logo.png" alt="Workforce Hiring Solutions logo" className="sidebar__logo-image" />
           </div>
 
           <div className="sidebar__brand-text">
