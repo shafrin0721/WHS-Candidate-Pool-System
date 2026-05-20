@@ -25,12 +25,7 @@ export default function AdditionalDetails({
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 fade-in">
       <div className="w-full max-w-5xl card">
         <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-100 pb-6 mb-8 gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-              ⚙️
-            </div>
-            <h1 className="text-xl font-bold text-blue-900">{pageTitle}</h1>
-          </div>
+        
 
           <div className="flex items-center gap-2 text-xs font-medium text-slate-400 overflow-x-auto py-2">
             <div className="flex items-center gap-1.5 shrink-0">

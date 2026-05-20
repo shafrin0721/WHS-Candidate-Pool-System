@@ -4,6 +4,7 @@ import BasicInformation from './Candidate/BasicInformation';
 import ProfessionalInfo from './Candidate/ProfessionalInfo';
 import SkillsExperience from './Candidate/SkillsExperience';
 import AdditionalDetails from './Candidate/AdditionalDetails';
+import Navbar from './components/Navbar';
 import type { BasicInfoData, ProfessionalInfoData } from './Candidate/types';
 import type { CandidateFormData } from './types/candidate';
 
@@ -40,7 +41,10 @@ function App() {
   };
 
   return (
-    <Routes>
+    <>
+      <Navbar />
+      <div className="pt-16 min-h-screen bg-slate-50">
+        <Routes>
       <Route path="/" element={<Navigate to="/candidate/basic" replace />} />
       <Route path="/candidate" element={<Navigate to="/candidate/basic" replace />} />
       <Route
@@ -90,8 +94,10 @@ function App() {
           />
         }
       />
-      <Route path="*" element={<Navigate to="/candidate/basic" replace />} />
-    </Routes>
+          <Route path="*" element={<Navigate to="/candidate/basic" replace />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
